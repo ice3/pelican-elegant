@@ -12,3 +12,8 @@ article small {
   margin-bottom: 0.25em;
   margin-top: 0.25em;
 }
+
+.article-content img {
+  display: block;
+  margin: 0 auto;
+}
