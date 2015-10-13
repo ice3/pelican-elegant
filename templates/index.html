@@ -102,6 +102,11 @@
                 <time pubdate="pubdate" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
                 </div>
                 </section>
+                {%if article.summary %}
+                <div class="recent-posts-summary">
+                    <a href="{{ SITEURL }}/{{ article.url }}">{{ article.summary }} <small> Lire la suite...</small> </a>
+                </div>
+                {%endif%}
             </article>
             {% endif %}
             {% endfor %}
