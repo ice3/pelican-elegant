@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block title %}
-All Categories · {{ super() }}
+Catégories · {{ super() }}
 {% endblock title %}
 
 {% block head_description %}
-All categories of the {{ SITENAME|striptags|e }} blog. 
+Toutes les catégories du blog {{ SITENAME|striptags|e }}.
 {% endblock head_description %}
 
 {% block meta_tags_in_head %}
@@ -32,7 +32,7 @@ All categories of the {{ SITENAME|striptags|e }} blog.
 {% block content %}
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="{{ SITEURL }}/categories.html">All Categories</a></h1>
+    <h1><a href="{{ SITEURL }}/categories.html">Toutes les catégories</a></h1>
     </header>
 </div>
 
@@ -51,7 +51,7 @@ All categories of the {{ SITENAME|striptags|e }} blog.
                 <div id="{{ category.slug }}-ref" class="accordion-body collapse">
                     <div class="accordion-inner">
                         <ul class="list-articles-category">
-                            {% for article in articles %} 
+                            {% for article in articles %}
                             <li><time pubdate="pubdate" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a></li>
                             {% endfor %}
                         </ul>
@@ -74,6 +74,6 @@ All categories of the {{ SITENAME|striptags|e }} blog.
 </script>
 
 <script type="text/javascript" language="JavaScript">
-    uncollapse(); 
+    uncollapse();
 </script>
 {% endblock script %}
